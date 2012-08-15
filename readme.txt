@@ -1,8 +1,10 @@
 === _s ===
 
-Hi. I'm a starter theme called _s, or underscores, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+Hi. I'm a starter theme called _s_bootstrap, or underscores bootstrap, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
 
-My ultra-minimal CSS might make me look like theme tartare but that means less stuff to get in your way when you're designing your awesome theme. Here are some of the other more interesting things you'll find here ...
+This is a modified version of the _s theme from Automattic with suppor for Twitter's Bootstrap and CodeKit.
+
+Here are some of the other more interesting things you'll find here ...
 
 * A just right amount of lean, well-commented, modern, HTML5 templates.
 * A helpful 404 template.

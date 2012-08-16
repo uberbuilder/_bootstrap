@@ -21,21 +21,14 @@ Bootstrap: http://twitter.github.com/bootstrap/
 
 */
 
+
+
+
+@import "variables.scss";
 @import "bootstrap.scss";
 @import "bootstrap-responsive.scss";
+// End Bootstrap
 
-/* Links */
-a {
-	color: royalblue;
-}
-a:visited {
-	color: purple;
-}
-a:hover,
-a:focus,
-a:active {
-	color: midnightblue;
-}
 
 /* Alignment */
 .alignleft {

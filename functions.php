@@ -47,6 +47,11 @@ function _s_setup() {
 	//require( get_template_directory() . '/inc/wpcom.php' );
 
 	/**
+	*	Bootstrap nav format
+	*/
+	require_once( get_template_directory() . '/inc/class-bootstrap-walker.php' );
+
+	/**
 	 * Make theme available for translation
 	 * Translations can be filed in the /languages/ directory
 	 * If you're building a theme based on _s, use a find and replace
@@ -104,7 +109,7 @@ function _s_scripts() {
 
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'theme', get_template_directory_uri() . '/js/theme.js', array( 'jquery' ), '20120206', true );
+	wp_enqueue_script( 'theme', get_template_directory_uri() . '/js/theme-min.js', array( 'jquery' ), '20120206', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -115,6 +120,34 @@ function _s_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', '_s_scripts' );
+
+
+
+if ( ! function_exists( 'bootstrap_navbar_class' ) ) :
+/**
+ * Adds The Bootstrap navbar classes
+ *
+ * @author	WordPress.org
+ * @since	1.4.0 - 12.05.2012
+ *
+ * @return	void
+ */
+function bootstrap_navbar_class() {
+	$classes	=	array( 'nav nav-pills' );
+	/*
+	if ( 'static' != the_bootstrap_options()->navbar_position )
+		$classes[]	=	the_bootstrap_options()->navbar_position;
+	
+	if ( the_bootstrap_options()->navbar_inverse )
+		$classes[]	=	'navbar-inverse';
+	
+	apply_filters( 'the_bootstrap_navbar_classes', $classes );
+	*/
+	echo 'class="' . join( ' ', $classes ) . '"';
+}
+endif;
+
+
 
 /**
  * Implement the Custom Header feature
